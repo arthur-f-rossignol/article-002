@@ -17,8 +17,8 @@ function p_eig = principal_eigenvalue(N, I, parameters)
     Q = zeros(n, n);
 
     % boundary conditions
-    alpha = 2 * (1 - D / (D + v * dz));
-    beta  = 2 * (1 - D / (D - v * dz));
+    alpha = 2 - (8 * D) / (4 * D + v * dz);
+    beta  = 2 - (8 * D) / (4 * D - v * dz);
 
     % matrix P
     for i = 1:n
