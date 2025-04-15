@@ -12,7 +12,7 @@ I_0  = 600;         % light intensity at the surface
 % algal parameters of S1
 mu_1 = 0.04;        % maximum growth rate
 K_1  = 0.04;        % half-saturation constant for nutrient uptake
-H_1  = 20;          % half-saturation constant for nutrient uptake 
+H_1  = 20;          % half-saturation constant for light uptake 
 m_1  = 0.01;        % mortality rate
 v_1  = 0.01;        % sinking velocity
 q_1  = 2 * 1e-10;   % internal nutrient quota
@@ -21,7 +21,7 @@ a_1  = 6 * 1e-10;   % absorption coefficient of biomass
 % algal parameters of S2
 mu_2 = 0.04;        % maximum growth rate
 K_2  = 0.12;        % half-saturation constant for nutrient uptake
-H_2  = 5;           % half-saturation constant for nutrient uptake 
+H_2  = 5;           % half-saturation constant for light uptake 
 m_2  = 0.01;        % mortality rate
 v_2  = 0.03;        % sinking velocity
 q_2  = 5 * 1e-10;   % internal nutrient quota
