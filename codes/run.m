@@ -36,7 +36,7 @@ Z  = linspace(0, l, n);
 t_max = 1e8;
 
 % solver options
-option = odeset('nonnegative', 1, 'RelTol', 1e-8, 'AbsTol', 1e-10);
+options = odeset('nonnegative', 1, 'RelTol', 1e-8, 'AbsTol', 1e-10);
 
 % resource profiles of trivial steady states
 N = N_0 * ones(1, n);
@@ -57,7 +57,7 @@ U0 = [1e3 * ones(n, 1);
 [t, monoculture_1] = ode15s(@(t, U) one_species(t, U, parameters), ...
                             [0, t_max], ...
                             U0, ...
-                            option);  
+                            options);  
 
 % biomass and resource profiles from S1's monoculture
 A1 = monoculture_1(end, 1:n);
@@ -84,7 +84,7 @@ U0 = [1e3 * ones(n, 1);
 [t, monoculture_2] = ode15s(@(t, U) one_species(t, U, parameters), ...
                             [0, t_max], ...
                             U0, ...
-                            option);  
+                            options);  
 
 % biomass and resource profiles from S2's monoculture
 A2 = monoculture_2(end, 1:n);
@@ -114,7 +114,7 @@ U0 = [1e3 * ones(n, 1);
 [t, competition_1] = ode15s(@(t, U) two_species(t, U, parameters), ...
                             [0, t_max], ...
                             U0, ...
-                            option);
+                            options);
 
 % biomass and resource profiles from competition with S1 as resident 
 A1_comp_1 = competition_1(end, 1:n);
@@ -128,7 +128,7 @@ U0 = [1e-3 * ones(n, 1);
 [t, competition_2] = ode15s(@(t, U) two_species(t, U, parameters), ...
                             [0, t_max], ...
                             U0, ...
-                            option);
+                            options);
 
 % biomass and resource profiles from competition with S2 as resident 
 A1_comp_2 = competition_2(end, 1:n);
