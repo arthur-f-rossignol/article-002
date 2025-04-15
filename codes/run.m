@@ -1,4 +1,4 @@
-%% Main script
+%% Main script for the prediction procedure and the competition simulation
 
 % abiotic parameters
 l    = 100;         % maximum depth of the water column 
