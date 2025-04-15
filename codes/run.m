@@ -33,7 +33,7 @@ n  = floor(l / dz);
 Z  = linspace(0, l, n);
 
 % time
-t_max = 1e8
+t_max = 1e8;
 
 % solver options
 option = odeset('nonnegative', 1, 'RelTol', 1e-8, 'AbsTol', 1e-10);
@@ -117,9 +117,9 @@ U0 = [1e3 * ones(n, 1);
                             option);
 
 % biomass and resource profiles from competition with S1 as resident 
-A1_I = competition_1(end, 1:n);
-A2_I = competition_1(end, (n + 1):(2 * n));
-N_I  = competition_1(end, (2 * n + 1):(3 * n));
+A1_comp_1 = competition_1(end, 1:n);
+A2_comp_1 = competition_1(end, (n + 1):(2 * n));
+N_comp_1  = competition_1(end, (2 * n + 1):(3 * n));
 
 % competition simulation with S2 as resident
 U0 = [1e-3 * ones(n, 1);
@@ -131,6 +131,6 @@ U0 = [1e-3 * ones(n, 1);
                             option);
 
 % biomass and resource profiles from competition with S2 as resident 
-A1_II = competition_2(end, 1:n);
-A2_II = competition_2(end, (n + 1):(2 * n));
-N_II  = competition_2(end, (2 * n + 1):(3 * n));
+A1_comp_2 = competition_2(end, 1:n);
+A2_comp_2 = competition_2(end, (n + 1):(2 * n));
+N_comp_2  = competition_2(end, (2 * n + 1):(3 * n));
