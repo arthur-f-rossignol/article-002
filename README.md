@@ -10,7 +10,7 @@ In the folder **codes**, there are 5 files:
 * `growth_rate.m`: function computing the growth rate,
 * `principal_eigenvalue.m`: function computing the principal eigenvalue estimate.
 
-In the folder **texts**, there are 2 documents:
+In the folder **manuscript**, there are 2 documents:
 
 * the last version of the preprint,
 * the supplementary information to the article.
